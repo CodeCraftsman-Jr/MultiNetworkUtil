@@ -1,0 +1,27 @@
+
+[3/6] Checking C compiler...
+C compiler found
+
+[4/6] Installing Go dependencies...
+Cleaning module cache...
+Downloading dependencies directly from GitHub repositories...
+Getting go-socks5 from GitHub...
+go: downloading github.com/armon/go-socks5 v0.0.0-20160902184237-e75332964ef5
+go: downloading golang.org/x/net v0.30.0
+Getting golang-lru from GitHub...
+go: github.com/hashicorp/golang-lru@master: invalid version: unknown revision master
+Getting yaml.v3 dependency...
+go: downloading gopkg.in/yaml.v3 v3.0.1
+Running: go mod tidy
+ERROR: Failed to download dependencies
+Error details: go: downloading github.com/hashicorp/golang-lru v0.5.5-0.20221031202041-bdf35e3f00df
+This might be due to:
+1. Network/proxy issues with gopkg.in or golang.org
+2. Corporate firewall blocking Go module downloads
+3. DNS resolution issues
+
+Try these solutions:
+1. Use a VPN or different network
+2. Configure Go proxy: go env -w GOPROXY=https://goproxy.io,direct
+3. Disable Go checksum: go env -w GOSUMDB=off
+Press Enter to exit:

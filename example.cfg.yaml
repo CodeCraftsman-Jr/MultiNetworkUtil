@@ -1,0 +1,28 @@
+# The algorithm used for selecting the network path.
+# One of: weighted-lru, roundrobin, random, hash
+algorithm: weighted-lru
+
+# The address where the SOCKS5 server will listen for incoming connections.
+# This should be in the format of IP:PORT.
+listen: 127.0.0.1:1080
+
+# If set to true, the port part of addr will be hashed when generating the address hash key.
+hashport: true
+
+# A list of network paths to use for routing traffic.
+# Each path can be of type 'direct' or 'proxy'.
+paths:
+  # REPLACE THESE IP ADDRESSES WITH YOUR ACTUAL NETWORK ADAPTER IPs
+
+  - type: direct # Direct connection through LAN/Ethernet
+    addr: 192.168.1.100 # REPLACE: IP address of your Ethernet adapter
+
+  - type: direct # Direct connection through WiFi
+    addr: 192.168.1.101 # REPLACE: IP address of your WiFi adapter
+
+# INSTRUCTIONS FOR SETUP:
+# 1. Run 'ipconfig /all' on your main PC
+# 2. Find your Ethernet adapter IPv4 address and replace 192.168.1.100
+# 3. Find your Wireless LAN adapter IPv4 address and replace 192.168.1.101
+# 4. Make sure both connections are active and working
+# 5. Save this file as 'config.yaml'
